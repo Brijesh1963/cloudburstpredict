@@ -9,7 +9,7 @@
 
   <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
 
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../templates/style-sub.css">
   <link rel="prefetch" href="../media/day2.jpg">
   <link rel="prefetch" href="../media/day1.jpg">
   <link rel="prefetch" href="../media/day3.jpg">
@@ -67,16 +67,16 @@
     <li style="float: left; margin-left: -10px;" class="forecast"><a class="repo-link"
         href="">Clouds</a></li>
 
-    <li><input spellcheck="false" class="search-city" id="searchCity" type="text" autocomplete="off"
+    <!-- <li><input spellcheck="false" class="search-city" id="searchCity" type="text" autocomplete="off"
         placeholder="🔍︎ Search City"></li>
-  </ul>
-
+  </ul> -->
+<!-- 
   <ul class="mobile-navbar">
     <li><input spellcheck="false" class="mobile-search-city" id="mobileSearchCity" type="text" autocomplete="off"
         placeholder="Search City..."></li>
-  </ul>
+  </ul> -->
 
-  <h1 class="location-name" id="locationName">Search City...</h1>
+  <!-- <h1 class="location-name" id="locationName">Search City...</h1>
 
   <div class="temperature-container">
     <div class="temperature-icon"><img class="imgs-as-icons" src="../icons/sunny.png"></div>
@@ -112,6 +112,49 @@
     </span>
   </div>
 
+    <div class="container">
+    <form action="action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
   <div class="additionals-second-row">
     <span class="data wind-speed-additional">
       <span class="wind-speed-additional-label">Wind Speed </span>
@@ -147,12 +190,54 @@
   <br>
   <!-- <div class="separator"></div> -->
 
-
+<!-- 
   <script src="../scripts/script.js"></script>
   <script src="../scripts/mobile.js"></script>
-  <br><br><br><br><br>
+  <br><br><br><br><br> --> -->
 </body>
-
+<div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div> -->
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
 <footer class="section-1">
   <div class="col">
     <h1>Clouds</h1>
@@ -174,14 +259,14 @@
   </div>
 
 </footer>
-<div class="copyright">
+<!-- <div class="copyright">
   <p>@ all copyright reserved to us</p>
-</div>
-<script>
+</div> -->
+<!-- <script>
   var randomBackground = backgroundsList[Math.floor(Math.random() * backgroundsList.length)];
 
   document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('../media/" + randomBackground + "')";
 
-</script>
+</script> -->
 
 </html>
