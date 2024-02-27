@@ -23,10 +23,6 @@ var backgroundsList = [
   "rainy5.jpg",
 ];
 
-var randomBackground = backgroundsList[Math.floor(Math.random() * backgroundsList.length)];
-
-document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('media/" + randomBackground + "')";
-
 cityInput.addEventListener("keyup", function(event)
 {
   if(event.key === "Enter")

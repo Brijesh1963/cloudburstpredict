@@ -64,8 +64,8 @@
   </head>
   <body>
     <ul class="navbar">
-      <li style="float: left; margin-left: -10px;" class="forecast"><a class="repo-link" href="https://github.com/kshitizrohilla/weather-app-using-openweathermap-api/">Clouds</a></li>
- 
+      <li style="float: left; margin-left: -10px;" class="forecast"><a class="repo-link" href="">Clouds</a></li>
+
       <li><input spellcheck="false" class="search-city" id="searchCity" type="text" autocomplete="off" placeholder="🔍︎ Search City"></li>
     </ul>
 
@@ -169,9 +169,15 @@
       <a href="#">terms & condition</a>
       <a href="#">contact us</a>
     </div>
- 
+
   </footer>
   <div class="copyright">
     <p>@ all copyright reserved to us</p>
   </div>
+  <script>
+    var randomBackground = backgroundsList[Math.floor(Math.random() * backgroundsList.length)];
+  
+    document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) , url('media/" + randomBackground + "')";
+  
+  </script>
 </html>

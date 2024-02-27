@@ -337,7 +337,7 @@ ul
 }
 
 footer {
-  margin-top: 350px;
+  /* margin-top: 350px; */
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
