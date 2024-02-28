@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-
+name_city=""
 def get_data(city):
     BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
     API_KEY = "87ce6387cccc97c824ed350534e68fb2"
@@ -21,15 +21,18 @@ def predict_cloud_burst(city):
         # Extract relevant features from JSON data
         feature_names = ['coord.lat', 'coord.lon', 'main.temp', 'main.feels_like',
                          'main.pressure', 'main.humidity', 'wind.speed', 'wind.deg']
+        
+        name_city=result["name"];
 
         extracted_features = [get_nested_value(
             result, name) for name in feature_names]
+        
 
         # Load the model outside the function to avoid loading it with every prediction
-        if 'model' not in app.config:
-            app.config['model'] = tf.keras.models.load_model('api_model')
+        # # if 'model' not in app.config:
+        # app.config['model'] = 
 
-        model = app.config['model']
+        model = tf.keras.models.load_model('api_model')
 
         # Make the prediction
         pred = model.predict([extracted_features])
@@ -57,14 +60,12 @@ def home():
     city_name = None  # Initialize city_name variable
     invalid_input = False
     if request.method == 'POST':
-        city_name = request.form['city']  # Retrieve city name from form input
-        try:
-            prediction = predict_cloud_burst(city_name)
-            if prediction is None:
-                invalid_input = True
-        except:
+        city_name = request.form['firstname']  # Retrieve city name from form input
+        
+        prediction = predict_cloud_burst(city_name)
+        if prediction is None:
             invalid_input = True
-    return render_template('index.html', city=city_name, prediction=prediction, invalid_input=invalid_input)
+    return render_template('index-sub.html', city=city_name, prediction=prediction, invalid_input=invalid_input)
 
 
 if __name__ == '__main__':
